@@ -1,0 +1,16 @@
+{
+    "items":{
+        "elastic":[
+            {
+                "id":1,
+                "title" : "Financiamento imobiliario",
+                "imgUrl" : "https://i.ibb.co/KzWzbvw/tierra-mallorca-rg-J1-J8-SDEAY-unsplash.jpg"
+            },
+            {
+               "id":2,
+               "title" : "Crédito com garantia de imóvel",
+               "imgUrl": "https://i.ibb.co/JyppHsp/scott-graham-OQMZw-Nd3-Th-U-unsplash.jpg"
+            }
+        ]
+    }
+}
