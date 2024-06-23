@@ -1,21 +1,14 @@
 'use client'
 import styles from "./page.module.scss";
 import Link from "next/link";
-import {items} from '@/public/items.json'
-import Carousel from "react-elastic-carousel"
-import './carousel.css'
-
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 1, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 2 },
-  { width: 1200, itemsToShow: 3 }
-];
-
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css'
+import Image from "next/image";
+import "./carousel.css"
 
 export default function Home() {
-  
-  const {elastic} = items
+  const firstImage= 'https://i.ibb.co/JyppHsp/scott-graham-OQMZw-Nd3-Th-U-unsplash.jpg'
+  const secondImage = 'https://i.ibb.co/KzWzbvw/tierra-mallorca-rg-J1-J8-SDEAY-unsplash.jpg'
   return (
    <main>
     <header className={styles.header}>
@@ -32,20 +25,38 @@ export default function Home() {
       </nav>
     </header>
 
-    <section className="carouselContainer">
-      <Carousel itemsToShow={1}  showArrows={false}>
-      {elastic.map((item)=>(
-        <div 
-        key={item.id}
-        className= "carouselWrapper"
-        style={{backgroundImage:`url(${item.imgUrl})`}}
-        >  
-        <div className= "carouselText">
-          <h3>{item.title}</h3>
-        </div> 
-        </div>
-      ))}
-      </Carousel>
+    <section className={styles.carouselContainer}>
+    <Splide className={styles.slideContainer}>
+      <SplideSlide>
+      <div className={styles.imgContainer}>
+      <Image
+      width={100}
+      height={400}
+      src={firstImage}
+      alt="test"
+      />
+      </div>
+
+      <div className={styles.textContainer}>
+        <h1>Financiamento imobiliário</h1>
+      </div>
+      </SplideSlide>
+      <SplideSlide>
+      <div className={styles.imgContainer}>
+      <Image
+      width={100}
+      height={100}
+      src={secondImage}
+      alt="test"
+      />
+      </div>
+
+      <div className={styles.textContainer}>
+        <h1>Crédito com garantia de imóvel</h1>
+      </div>
+
+      </SplideSlide>
+    </Splide>
     </section>
     <section>
       <h1>Modalidades</h1>

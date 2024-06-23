@@ -26,5 +26,36 @@
   }
 }
 
+.carouselContainer{
+  background-color: blue;
+  width: 100%;
+  height: 600px;
+
+  .slideContainer{
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+
+  .textContainer{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    h1{
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .imgContainer{
+    width: 100%;
+      img{
+        width: 100%;
+        object-fit: cover;
+        height: 600px;
+      }
+  }
+}
 
 
