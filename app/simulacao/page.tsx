@@ -15,9 +15,18 @@ export default function Home() {
     birthday: string
   }
 
+  const initialFormData:TemplateEmail={
+    name: '',
+    type: '',
+    value: '',
+    email: '',
+    phone: '',
+    birthday: ''
+  }
+  
+  
   const [currentStep, setCurrentStep] = useState(0)
-  const [formData, setFormData] = useState<TemplateEmail
-  >({})
+  const [formData, setFormData] = useState<TemplateEmail>(initialFormData)
   
 const templateParams = {
   typeOfFinancement: formData.type,
