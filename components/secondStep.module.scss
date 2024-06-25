@@ -1,0 +1,101 @@
+$primary-color: #003049;
+$p2:#005480;
+$p3:#0081C3;
+$p4:#00A3F6;
+$p5:#2FB9FF;
+$p6:#7DD3FF;
+$secondary-color: #212529;
+$s2:#343A40;
+$s3:#495057;
+$s4:#6C757D;
+$s5:#ADB5BD;
+$s6:#CED4DA;
+$s7:#FFFFFF;
+$s8:#1C2024;
+$s9:#0E1114;
+$s10:#0B1015;
+$s11:#060A0D;
+$s12:#040709;
+$s13:#000000;
+$warning: #d90429;
+
+
+@font-face {
+  font-family: 'Title';
+  src: url('../public/Merriweather-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Text-L';
+  src: url('../public/QueensidesLight-ZVj3l.ttf');
+}
+
+@font-face {
+  font-family: 'Text-M';
+  src: url('../public/QueensidesMedium-x30zV.ttf');
+}
+
+@font-face {
+  font-family: 'Lis';
+  src: url('../public/Deutschlander.otf');
+}
+
+@font-face {
+  font-family: 'Button-L';
+  src: url('../public/artemis-light.ttf');
+}
+
+@font-face {
+  font-family: 'Button-R';
+  src: url('../public/artemis-regular.ttf');
+}
+
+
+.container{
+    width: 100vw;
+    h3{
+        margin-bottom: 24px;
+        text-align: end;
+        width: 100%;
+        margin-left:-32px;
+        font-family: 'Title';
+        color: $s7;
+       
+    }
+.form{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    
+    input,select{
+        padding: 4px ;
+        background-color: $secondary-color;
+        border: 2px solid $s4;
+        color: $s3;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        &:focus{
+            border-color: $secondary-color;
+            color: $s7;
+            background-color: $s4;
+        }
+    }
+    span{
+        font-size: 0.875rem;
+        margin-bottom: 8px;
+        font-size: 'Text-L';
+        color: $warning;
+    }
+    label{
+        margin-bottom: 4px;
+        color: $s7;
+        font-family: 'Text-M';
+        font-size: 1.1rem;
+    }
+
+    select{
+        margin-bottom: 12px;
+    }
+}
+}
