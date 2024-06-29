@@ -1,9 +1,10 @@
 'use client'
-import { useRef, useState, useEffect, FormEvent } from "react";
-import FirstStep from "@/components/firstStepForm";
+import { useRef, useState} from "react";
+import FirstStep from "@/components/FirstStepForm";
 import SecondStep from "@/components/secondStepForm";
 import emailjs from '@emailjs/browser'
 import styles from './page.module.scss'
+import Link from "next/link";
 
 export default function Home() {
   type TemplateEmail={
@@ -27,8 +28,7 @@ export default function Home() {
   const valueMessage = useRef<HTMLSpanElement>(null)
   const typeMessage =  useRef<HTMLSpanElement>(null)
   const inputValue = useRef<HTMLInputElement>(null)
-  const inputType = useRef<HTMLInputElement>(null)
-  
+  const inputType = useRef<HTMLInputElement>(null)  
 
   const nameMessage =  useRef<HTMLSpanElement>(null)
   const emailMessage =  useRef<HTMLSpanElement>(null)
@@ -149,13 +149,18 @@ const handleClick = async() => {
       inputValue.current.style.borderColor = '#d90429'
     }
    else {
-        setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);
     }
-};
+   
+    }
+
 
 
   return (
+   <>
+   
     <main className={styles.form}>  
+    <Link href={'/'}>Voltar</Link>
      <form ref={formRef}>
      {steps[currentStep]}
      <div className={styles.buttons}>
@@ -166,5 +171,6 @@ const handleClick = async() => {
      </div>
     </form>
     </main>
+   </>
   );
 }

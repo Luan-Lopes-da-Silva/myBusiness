@@ -222,14 +222,31 @@ $s13:#000000;
 .footer{
   background-color:$s8;
   padding: 40px;
-  height: 150px;
   display: flex;
   justify-content: space-between;
 
-  h1{
-    font-size: 3rem;
-    color: $p6;
-    font-family: 'Title';
+
+  .infos{
+    
+    h1{
+      font-size: 3rem;
+      color: $p6;
+      font-family: 'Title';
+      margin-bottom: 12px;
+    }
+
+    .info{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      
+      p{
+        color: #CED4DA;
+        font-family: 'Lis';
+        font-size: 1.5rem;
+      }
+    }
   }
 
   .icons{
