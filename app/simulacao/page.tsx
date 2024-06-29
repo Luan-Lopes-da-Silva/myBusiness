@@ -113,7 +113,8 @@ const handleClick = async() => {
       nextStep();
     }
 };
-  const prevStep = () => setCurrentStep((prevStep)=>prevStep-1)
+
+  const prevStep = () => setCurrentStep((prevStep)=>prevStep-1);
 
   const handleChange = (e:any)=>{
     const {name,value} = e.target
@@ -157,8 +158,6 @@ const handleClick = async() => {
 
 
   return (
-   <>
-   
     <main className={styles.form}>  
     <Link href={'/'}>Voltar</Link>
      <form ref={formRef}>
@@ -171,6 +170,5 @@ const handleClick = async() => {
      </div>
     </form>
     </main>
-   </>
   );
 }
