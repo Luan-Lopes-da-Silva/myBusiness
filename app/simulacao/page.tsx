@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useState} from "react";
-import FirstStep from "@/components/FirstStepForm";
+import FirstStep from "@/components/firstStepForm";
 import SecondStep from "@/components/secondStepForm";
 import emailjs from '@emailjs/browser'
 import styles from './page.module.scss'

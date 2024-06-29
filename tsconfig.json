@@ -23,6 +23,6 @@
       "@splidejs/react-splide": ["node_modules/@splidejs/react-splide/dist/types"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/FirstStepForm.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/firstStepForm.tsx"],
   "exclude": ["node_modules"]
 }

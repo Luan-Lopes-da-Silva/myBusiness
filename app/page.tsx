@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'
 import Image from "next/image";
-import { useState } from "react";
 import twitterIcon from '@/public/icons8-twitter.svg'
 import instaIcon from '@/public/icons8-instagram.svg'
 import linkedinIcon from '@/public/icons8-linkedin.svg'
