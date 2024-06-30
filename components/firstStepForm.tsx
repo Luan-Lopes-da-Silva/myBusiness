@@ -25,10 +25,10 @@ export default function FirstStep({data,handleChange,typeMessage,valueMessage,in
             value={data.type}
             onChange={handleChange}
             ref={inputType}
+            defaultValue={'Selecione uma opção de financiamento'}
             >
-                <option selected>Selecione uma opção de financiamento</option>
-                <option value={'financiamento'}>Financiamento Imobiliario</option>
-                <option value="credito">Crédito com garantia de imovel.</option>
+                <option value={'Financiamento Imobiliario'}>Financiamento Imobiliario.</option>
+                <option value="Crédito com garantia de imovel">Crédito com garantia de imovel.</option>
                 </select>
             
             <label htmlFor="value">Qual valor deseja?</label>

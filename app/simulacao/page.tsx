@@ -42,13 +42,26 @@ export default function Home() {
   const [currentStep, setCurrentStep] = useState(0)
   const [formData, setFormData] = useState<TemplateEmail>(initialFormData)
   
-const templateParams = {
+
+  const date = new Date(formData.birthday)
+  const day = date.getDay()
+  const month = date.getMonth()
+  const year = date.getFullYear()
+  let fullDate;
+  
+  if(day<10){
+  fullDate = `0${day}/0${month}/${year}`
+  }else{
+  fullDate =  `${day}/${month}/${year}`
+  }
+
+  const templateParams = {
   typeOfFinancement: formData.type,
   value: formData.value,
   name: formData.name,
   email: formData.email,
   phone: formData.phone,
-  birthday: formData.birthday
+  birthday: fullDate
 }
 
 
@@ -97,14 +110,16 @@ const handleClick = async() => {
       phoneMessage.current.innerText = ''
       birthdayMessage.current.innerText = ''
       
+      const serviceId:any= process.env.NEXT_PUBLIC_MY_SERVICE_ID
+      const templateId:any=process.env.NEXT_PUBLIC_MY_TEMPLATE_ID
 
       setTimeout(() => {
         alert('Um consultor ja foi notificado aguarde o contato!')
       }, 2000);
       emailjs.send(
-        'service_lrwkc6w',
-        'template_qwvda52',
-        templateParams,
+         serviceId,
+         templateId,
+         templateParams,
         {
           publicKey: 'Wz70DHahVOAsSQMYv',
         }
