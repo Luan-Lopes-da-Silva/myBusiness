@@ -134,6 +134,7 @@ const handleClick = async() => {
   const handleChange = (e:any)=>{
     const {name,value} = e.target
     setFormData({...formData, [name]:value})
+    console.log('ola')
   }
 
 
