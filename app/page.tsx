@@ -12,10 +12,13 @@ import emailIcon from '@/public/mail_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import phoneIcon from '@/public/call_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import scheduleIcon from '@/public/schedule_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import fakeLogo from '@/public/fakelogo.svg'
+import financementImage from '@/public/mika-baumeister-bGZZBDvh8s4-unsplash.jpg'
+import creditImage from '@/public/maria-ziegler-jJnZg7vBfMs-unsplash (1).jpg'
+import ownerImage from '@/public/owner.svg'
+import partnerImage from '@/public/partner.svg'
+import businessMan from '@/public/nathan-costa-T8Q8znYdbDw-unsplash.jpg'
 
 export default function Home() {
-  const firstImage= 'https://i.ibb.co/JyppHsp/scott-graham-OQMZw-Nd3-Th-U-unsplash.jpg'
-  const secondImage = 'https://i.ibb.co/KzWzbvw/tierra-mallorca-rg-J1-J8-SDEAY-unsplash.jpg'
   return (
    <main>
     <header className={styles.header}>
@@ -37,155 +40,254 @@ export default function Home() {
       </nav>
     </header>
 
-    <section className={styles.carouselContainer}>
-    <Splide className={styles.slideContainer}>
-      <SplideSlide>
-      <div className={styles.imgContainer}>
-      <Image
-      width={100}
-      height={400}
-      src={firstImage}
-      alt="test"
-      />
-      </div>
 
-      <div className={styles.textContainer}>
-        <h1>Financiamento imobiliário</h1>
-      </div>
-      </SplideSlide>
-      <SplideSlide>
-      <div className={styles.imgContainer}>
-      <Image
-      width={100}
-      height={100}
-      src={secondImage}
-      alt="test"
-      />
-      </div>
-
-      <div className={styles.textContainer}>
-        <h1>Crédito com garantia de imóvel</h1>
-      </div>
-
-      </SplideSlide>
-    </Splide>
-    </section>
+      <section className={styles.headerPresentation}>
+        <div className={styles.infos}>
+        <h1>Revolucionando Seu Sonho de Casa Própria</h1>
+        <h4>Benefícios Exclusivos e Facilidade Incomparável no Seu Financiamento Imobiliário</h4>
+        <button><Link href={'/simulacao'}>Simule Ja</Link></button>
+        </div>
+      </section>
     
-   
-      <section id="modalidades" className={styles.modalidades}>
-      <h2>Modalidades</h2>
-
-      <div className={styles.cardsContainer}>
      
-          <div className={styles.flipCard}>
-          <div className={styles.flipCardInner}>
-          <div className={styles.front}>
-          <h4>Financiamento Imobiliario</h4>
+      <section id="modalidades" className={styles.section}>
+      <h2>Modalidades de financiamento</h2>
+
+      <div className={styles.containerModalities}>
+        <div className={styles.modality}>
+          <Image 
+          width={300}
+          height={300}
+          alt="financement image"
+          src={financementImage}
+          />
+          <div>
+          <h3>Financiamento imobiliario</h3>
+          <p>O financiamento imobiliário é um empréstimo de longo prazo destinado à aquisição de imóveis residenciais ou comerciais. Os bancos e outras instituições financeiras fornecem o capital necessário para a compra, enquanto o comprador se compromete a pagar o valor emprestado em parcelas mensais que incluem juros e outros encargos. Esse tipo de financiamento permite que pessoas comprem imóveis mesmo sem possuir o valor total necessário. O processo geralmente envolve uma análise de crédito, avaliação do imóvel e a definição de termos como o prazo de pagamento e a taxa de juros, que podem ser fixas ou variáveis.</p>
+          </div>
+        </div>
+        <div className={styles.modality2}>
+         <div>
+         <h3>Crédito com garantia de imovel</h3>
+         <p>O crédito com garantia de imóvel, também conhecido como home equity, é um tipo de empréstimo onde o tomador usa um imóvel quitado ou financiado como garantia para obter crédito. Esse tipo de financiamento permite acesso a valores mais altos e prazos mais longos, com taxas de juros geralmente mais baixas comparadas a outras modalidades de crédito pessoal. Os recursos obtidos podem ser utilizados para diversas finalidades, como reforma de imóveis, investimentos, educação, quitação de dívidas e outros projetos pessoais ou empresariais. Caso o tomador não consiga cumprir com as obrigações de pagamento, o imóvel pode ser tomado pela instituição financeira para quitar a dívida.</p>
+         </div>
           <Image
           width={300}
           height={300}
-          alt="Financiamento Imobiliario."
-          src={firstImage}
+          alt="credit image"
+          src={creditImage}
           />
         </div>
-        <div className={styles.back}>
-          <p>Financiamento imobiliário é a compra de um imóvel com o pagamento parcelado, geralmente a longo prazo, com o imóvel adquirido como garantia.</p>
-        </div>
-     
-          </div>
-          </div>
-      
-        
-      <div className={styles.flipCard}>
-        <div className={styles.flipCardInner}>
-        <div className={styles.front}>
-          <h4>Crédito com garantia de imovel</h4>
-          <Image
-           width={300}
-           height={300}
-          alt="Crédito com garantia de imovel."
-          src={secondImage}
-          />
-        </div>
-        <div className={styles.back}>
-          <p>Crédito com garantia de imóvel é um empréstimo em que o imóvel do mutuário é usado como garantia, oferecendo taxas de juros mais baixas.</p>
-        </div>
-        </div>
       </div>
-      
-      </div>
+      </section>
+
+      <section className={styles.section}>
+      <h2>Quais são os beneficios de fechar com a WALL-I?</h2>
+        <div className={styles.benefits}>
+          <div className={styles.benefitContainer}>
+          <p>1.Taxas de Juros Competitivas: Wall-i oferece algumas das menores taxas de juros do mercado, tornando seu financiamento mais acessível.</p>
+        <p>2.Aprovação Rápida: Processo de aprovação ágil que garante que você tenha uma resposta em até 24 horas.</p>
+        <p>3.Flexibilidade de Pagamento: Planos de pagamento personalizados para se ajustarem à sua situação financeira, com opções de prazos variando de 5 a 30 anos.</p>
+        <p>4.Consultoria Personalizada: A equipe de especialistas em financiamento da Wall-i oferece consultoria gratuita para ajudar a escolher a melhor opção de financiamento.</p>
+      <p>5.Portal Online Intuitivo: Um portal online fácil de usar, onde você pode acompanhar o status do seu financiamento, fazer pagamentos e gerenciar sua conta.</p>
+      <p>6.Seguro Residencial Gratuito: Ao fazer um financiamento com a Wall-i, você recebe um ano de seguro residencial gratuito.</p>
+       
+          </div>
+      <Image
+      width={500}
+      height={600}
+      src={businessMan}
+      alt="Business man"
+      />
+        <div className={styles.benefitContainer}>
+        <p>7.Amortização Antecipada: Opção de amortização antecipada sem multas ou taxas adicionais.</p>
+        <p>8.Programa de Fidelidade: Descontos exclusivos e benefícios adicionais para clientes recorrentes da Wall-i.</p>
+        <p>9.Aplicativo Móvel: Um aplicativo móvel que permite que você gerencie seu financiamento de qualquer lugar, a qualquer hora.</p>
+        <p>10.Parcerias com Construtoras: Descontos especiais em imóveis de construtoras parceiras da Wall-i.</p>
+        <p>11.Suporte 24/7: Suporte ao cliente disponível 24 horas por dia, 7 dias por semana, para responder a qualquer dúvida ou problema.</p>
+        <p>12.Cashback: Receba cashback em compras realizadas com parceiros da Wall-i, ajudando a reduzir ainda mais o custo do seu financiamento.</p>  
+        </div>
+        </div>
+      </section>
+
+      <section className={styles.partners}>
+        <h2>Nossos parceiros</h2>
+          <div className={styles.partner}>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div>
+            <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> <div>
+              <Image
+              width={50}
+              height={50}
+              src={partnerImage}
+              alt="TT icon"
+              />
+            </div> 
+           
+          </div>
       </section>
 
 
     <section id="sobre" className={styles.section}>
-      <h1>Aba sobre</h1>
+      <h2>Nossa História</h2>
 
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
+     <div className={styles.about}>
+      <Image
+      width={300}
+      height={600}
+      src={ownerImage}
+      alt="owner image"
+      />
+      <p>Fundada em 2010 por visionários do setor financeiro e imobiliário, a Wall-i surgiu com a missão de transformar a experiência de financiamento de imóveis. Desde o início, a empresa se destacou por sua abordagem inovadora e centrada no cliente, quebrando barreiras e simplificando processos que antes eram considerados complexos e burocráticos.
+      A Wall-i começou sua jornada em um pequeno escritório na cidade de São Paulo, com uma equipe dedicada de apenas 10 pessoas. Com a visão de oferecer soluções financeiras acessíveis e transparentes, a empresa rapidamente ganhou a confiança de seus primeiros clientes, tornando-se sinônimo de segurança e eficiência no mercado imobiliário.
+      Ao longo dos anos, a Wall-i investiu fortemente em tecnologia e inovação. Em 2012, lançou seu primeiro portal online, permitindo que os clientes acompanhassem o status de seus financiamentos de forma prática e intuitiva. Em 2015, com a criação de um aplicativo móvel, a empresa consolidou sua presença digital, oferecendo ainda mais conveniência e acesso à informação.
       </p>
-
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
-
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
-
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate quia nam porro laudantium iure repellat ipsum maiores, ex molestiae fuga expedita doloribus placeat 
-      reprehenderit facilis. Voluptatibus id recusandae distinctio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus atque. Dolor cumque vel asperiores hic eum quod voluptas voluptates fugiat, reiciendis excepturi neque eveniet ipsa accusamus sapiente officia eligendi.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam exercitationem facere assumenda. Blanditiis recusandae nostrum consequuntur fugit aspernatur praesentium nobis dicta deserunt! Enim, tempore perspiciatis quis ipsum error deleniti.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque corporis ratione, cum nobis odit ipsam non velit ullam alias deserunt voluptas blanditiis dignissimos, culpa molestiae vel quibusdam. Ea, eius.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores odit omnis fugiat inventore, qui dicta voluptatum, culpa quis placeat totam, quae voluptates ipsum aliquam ducimus sint. Ipsa incidunt dolorem facilis!
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsum doloremque dolores accusantium quas natus pariatur? Possimus est beatae mollitia inventore, maiores id expedita, nobis et repudiandae, voluptates sit aperiam.
-      </p>
+     </div>
       </section>
     <footer className={styles.footer}>
       <div className={styles.infos}>

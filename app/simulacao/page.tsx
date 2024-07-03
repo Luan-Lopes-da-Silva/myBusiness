@@ -112,6 +112,7 @@ const handleClick = async() => {
       
       const serviceId:any= process.env.NEXT_PUBLIC_MY_SERVICE_ID
       const templateId:any=process.env.NEXT_PUBLIC_MY_TEMPLATE_ID
+      const publicKey:any=process.env.NEXT_PUBLIC_MY_PUBLIC_KEY
 
       setTimeout(() => {
         alert('Um consultor ja foi notificado aguarde o contato!')
@@ -134,7 +135,6 @@ const handleClick = async() => {
   const handleChange = (e:any)=>{
     const {name,value} = e.target
     setFormData({...formData, [name]:value})
-    console.log('ola')
   }
 
 
