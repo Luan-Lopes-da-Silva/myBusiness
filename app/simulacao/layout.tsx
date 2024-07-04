@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wall-I Simulação",
+  title: "Simulação",
   description: "Pagina de simuilação da nossa plataforma",
 };
 
