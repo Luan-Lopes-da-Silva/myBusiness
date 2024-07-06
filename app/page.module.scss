@@ -364,8 +364,8 @@ $s13:#000000;
     .fixedButton{
       display: block;
       position: fixed;
-      top: 90%;
-      left: 75%;
+      top: 85%;
+      left: 65%;
       width: max-content;
       padding: 8px 36px;
       cursor: pointer;
@@ -387,7 +387,7 @@ $s13:#000000;
     .section{
       margin: 30px 0px;
       h2{
-        width: 500px;
+        width: 350px;
       }
 
       .containerModalities{
@@ -448,7 +448,7 @@ $s13:#000000;
     .partners{
       margin: 12px 0px;
       .partner{
-        width: 434px;
+        width: 300px;
        
         flex-wrap: wrap;
 
@@ -456,17 +456,19 @@ $s13:#000000;
 
           img{
             background-color: red;
-            width: 32px;
-            height: 32px;
+            width: 34.4px;
+            height: 33px;
           }
           border-left: none;
-          &:nth-child(6),
+          &:nth-child(4),
+          &:nth-child(8),
           &:nth-child(12),
-          &:nth-child(18)
+          &:nth-child(16),
+          &:nth-child(20)
           {
             border-right: 2px solid $p6;
           }
-          &:nth-child(6)~ div{
+          &:nth-child(4)~ div{
             border-top: none;
           }
         }
@@ -475,9 +477,10 @@ $s13:#000000;
     }
 
     .footer{
+      padding: 20px;
       align-items: center;
       justify-content: unset;
-      gap: 48px;
+      gap: 60px;
       .info{
         p{
           font-size: 1rem;
@@ -485,6 +488,7 @@ $s13:#000000;
       }
 
       .icons{
+  
         margin-top: 0;
       }
     }
