@@ -55,267 +55,291 @@ $s13:#000000;
 }
 
 
-.header{
-  background-color:$s8;
-  padding: 40px;
+.container{
 
-
-  h1{
-    font-size: 3rem;
-    font-family: 'Title';
-    color: $p6;
+  .fixedButton{
+    display: none;
   }
-  nav{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    ul{
-      display: flex;
-      gap: 12px;
-      list-style: none;
-    a{
-      text-decoration: none;
-      color: $s5;
-      transition: .4s;
-      font-family: 'Lis';
-      font-size: 1.5rem;
 
-      &:hover{
-        text-decoration: underline;
-        color: $s7;
-      }
-    }
-    }
-  }
-}
 
-.headerPresentation{
-  height: 600px;
-  position: relative;
-  padding: 20px;
-  background: url('../public/header.svg');
-  background-position: center;
-  background-size: cover;
+  .header{
+    background-color:$s8;
+    padding: 40px;
   
-  .infos{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 12px;
-
+  
     h1{
-      font-size: 2.5rem;
-      color: $s9;
+      font-size: 3rem;
       font-family: 'Title';
-      width: 450px;
+      color: $p6;
     }
-  
-    h4{
-      font-size: 1rem;
-      color: $secondary-color;
-      font-family: 'Title';
-    }
-
-    button{
-      width: max-content;
-      padding: 8px 36px;
-      cursor: pointer;
-      border: 2px solid $p5;
-      border-radius: 8px;
-      background-color: $primary-color;
-      text-transform: uppercase;
-      transition: .4s;
-      margin-top: 20px;
-
-      &:hover{
-      border-color: $primary-color;
-      background-color: $p5;
-      }
+    nav{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      ul{
+        display: flex;
+        gap: 12px;
+        list-style: none;
       a{
         text-decoration: none;
-        color: $s7;
-        font-family: 'Alternative-Button';
-        font-size: 1.1rem;
+        color: $s5;
+        transition: .4s;
+        font-family: 'Lis';
+        font-size: 1.5rem;
+  
+        &:hover{
+          text-decoration: underline;
+          color: $s7;
+        }
+      }
       }
     }
   }
- 
-}
-
-
-.section{
-  padding: 20px;
-  margin: 30px 0px;
-
-  h2{
-    margin-bottom: 8px;
-    font-family: 'Title';
-    color: $s13;
-    font-size: 2rem;
-  }
-
-  p{
-    color: $s2;
-    font-family: 'Text-R';
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  .containerModalities{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-    .modality,.modality2{
+  
+  .headerPresentation{
+    height: 600px;
+    position: relative;
+    padding: 20px;
+    background: url('../public/header.svg');
+    background-position: center;
+    background-size: cover;
+    
+    .infos{
       display: flex;
-      gap: 12px;
-
-
-      h3{
-        font-size: 1.3rem;
+      flex-direction: column;
+      position: absolute;
+      bottom: 12px;
+  
+      h1{
+        font-size: 2.5rem;
+        color: $s9;
+        font-family: 'Title';
+        width: 450px;
+      }
+    
+      h4{
+        font-size: 1rem;
+        color: $secondary-color;
         font-family: 'Title';
       }
-      img{
-        object-fit: cover;
-      }
-
-      div{
-        p{
-          font-family: 'Text-M';  
-          width: 650px;
+  
+      button{
+        width: max-content;
+        padding: 8px 36px;
+        cursor: pointer;
+        border: 2px solid $p5;
+        border-radius: 8px;
+        background-color: $primary-color;
+        text-transform: uppercase;
+        transition: .4s;
+        margin-top: 20px;
+  
+        &:hover{
+        border-color: $primary-color;
+        background-color: $p5;
+        }
+        a{
+          text-decoration: none;
+          color: $s7;
+          font-family: 'Alternative-Button';
+          font-size: 1.1rem;
         }
       }
     }
-
-    .modality2{
-     place-content: end;
-
-     h3{
-      text-align: end;
-     }
-    }
+   
   }
-
-  .benefits{
-    display: flex;
-    gap: 16px;
-    align-items: center;
-
-    .benefitContainer{
-      p{
-        margin-top: 12px;
-      }
-    }
-
-    img{
-      object-fit: cover;
-      border-radius: 200px;
-    }
-  }
-
-  .about{
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    img{
-      object-fit: cover;
-      display: flex;
-      height: max-content;
-      margin: 0;
-    }
-
-    p{
-      font-family: 'Text-M';  
-      width: 530px;
-    }
-  }
-
   
-}
-
-.partners{
-  margin: 30px 0px;
-
-  h2{
-    margin-bottom: 8px;
-    font-family: 'Title';
-    color: $s13;
-    font-size: 2rem;
-  }
-
-  p{
-    color: $s2;
-    font-family: 'Text-R';
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-
-  .partner{
-    display: flex;
-    width: max-content;
-    background-color: $secondary-color;
-    div{
-      border-left: 2px solid $p6;
-      border-top: 2px solid $p6;
-      border-bottom: 2px solid $p6;
-      padding: 20px;
-    }
-
-    div:last-child{
-      border-right: 2px solid $p6;
-    }
-  }
-}
-
-
-.footer{
-  background-color:$s8;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-
-
-  .infos{
-    
-    h1{
-      font-size: 3rem;
-      color: $p6;
+  
+  .section{
+    padding: 20px;
+    margin: 30px 0px;
+  
+    h2{
+      margin-bottom: 8px;
       font-family: 'Title';
-      margin-bottom: 12px;
+      color: $s13;
+      font-size: 2rem;
     }
-
-    .info{
+  
+    p{
+      color: $s2;
+      font-family: 'Text-R';
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  
+    .containerModalities{
       display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+      .modality,.modality2{
+        display: flex;
+        gap: 12px;
+  
+  
+        h3{
+          font-size: 1.3rem;
+          font-family: 'Title';
+        }
+        img{
+          object-fit: cover;
+        }
+  
+        div{
+          p{
+            font-family: 'Text-M';  
+            width: 650px;
+          }
+        }
+      }
+  
+      .modality2{
+       place-content: end;
+  
+       h3{
+        text-align: end;
+       }
+      }
+    }
+  
+    .benefits{
+      display: flex;
+      gap: 16px;
       align-items: center;
+  
+      .benefitContainer{
+        p{
+          margin-top: 12px;
+        }
+      }
+  
+      img{
+        object-fit: cover;
+        border-radius: 200px;
+      }
+    }
+  
+    .about{
+      display: flex;
       gap: 12px;
-      margin-bottom: 24px;
-      
+      align-items: center;
+      img{
+        object-fit: cover;
+        display: flex;
+        height: max-content;
+        margin: 0;
+      }
+  
       p{
-        color: #CED4DA;
-        font-family: 'Lis';
-        font-size: 1.5rem;
+        font-family: 'Text-M';  
+        width: 530px;
+      }
+    }
+  
+    
+  }
+  
+  .partners{
+    margin: 30px 0px;
+  
+    h2{
+      margin-bottom: 8px;
+      font-family: 'Title';
+      color: $s13;
+      font-size: 2rem;
+    }
+  
+    p{
+      color: $s2;
+      font-family: 'Text-R';
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  
+  
+    .partner{
+      display: flex;
+      width: max-content;
+      background-color: $secondary-color;
+      div{
+        border-left: 2px solid $p6;
+        border-top: 2px solid $p6;
+        border-bottom: 2px solid $p6;
+        padding: 20px;
+      }
+  
+      div:last-child{
+        border-right: 2px solid $p6;
       }
     }
   }
-
-  .icons{
+  
+  
+  .footer{
+    background-color:$s8;
+    padding: 40px;
     display: flex;
-    gap: 12px;
-    margin-top: 60px;
-    
-    img{
-      border: 2px solid $s7;
-      padding: 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: .4s;
-      &:hover{
-        border-color: $p4;
+    justify-content: space-between;
+  
+  
+    .infos{
+      
+      h1{
+        font-size: 3rem;
+        color: $p6;
+        font-family: 'Title';
+        margin-bottom: 12px;
+      }
+  
+      .info{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+        
+        p{
+          color: #CED4DA;
+          font-family: 'Lis';
+          font-size: 1.5rem;
+        }
+      }
+    }
+  
+    .icons{
+      display: flex;
+      gap: 12px;
+      margin-top: 60px;
+      
+      img{
+        border: 2px solid $s7;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+          border-color: $p4;
+        }
       }
     }
   }
 }
 
 
+@media(max-width:640px){
+  .container{
+   
+    .header{
+      padding: 20px;
+      position: fixed;
+      z-index: 1000;
+  
+      nav{
+        ul{
+          display: none;
+        }
+      }
+    }
+  }
+}

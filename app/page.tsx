@@ -367,16 +367,11 @@ export default function Home() {
 
 
   return (
-   <main>
+   <main className={styles.container}>
     <header className={styles.header}>
       <nav>
         <div>
-          <Image
-          alt="fake logo"
-          width={100}
-          height={100}
-          src={fakeLogo}
-          />
+        <h1>LOGO</h1>
         </div>
         <ul>
           <Link href={'/'}>Inicio</Link>
@@ -444,7 +439,7 @@ export default function Home() {
       whileInView="show"
       exit="hide"
       variants={animateText}
-      >Quais são os beneficios de fechar com a WALL-I?</motion.h2>
+      >Quais são os beneficios de fechar conosco?</motion.h2>
         <div className={styles.benefits}>
           <motion.div className={styles.benefitContainer}
           initial="hide"
@@ -452,12 +447,12 @@ export default function Home() {
           exit="hide"
           variants={introHeaderVariants}
           >
-          <p>1.Taxas de Juros Competitivas: Wall-i oferece algumas das menores taxas de juros do mercado, tornando seu financiamento mais acessível.</p>
+          <p>1.Taxas de Juros Competitivas:oferece algumas das menores taxas de juros do mercado, tornando seu financiamento mais acessível.</p>
           <p>2.Aprovação Rápida: Processo de aprovação ágil que garante que você tenha uma resposta em até 24 horas.</p>
           <p>3.Flexibilidade de Pagamento: Planos de pagamento personalizados para se ajustarem à sua situação financeira, com opções de prazos variando de 5 a 30 anos.</p>
-          <p>4.Consultoria Personalizada: A equipe de especialistas em financiamento da Wall-i oferece consultoria gratuita para ajudar a escolher a melhor opção de financiamento.</p>
+          <p>4.Consultoria Personalizada: A equipe de especialistas em financiamento daoferece consultoria gratuita para ajudar a escolher a melhor opção de financiamento.</p>
           <p>5.Portal Online Intuitivo: Um portal online fácil de usar, onde você pode acompanhar o status do seu financiamento, fazer pagamentos e gerenciar sua conta.</p>
-          <p>6.Seguro Residencial Gratuito: Ao fazer um financiamento com a Wall-i, você recebe um ano de seguro residencial gratuito.</p>
+          <p>6.Seguro Residencial Gratuito: Ao fazer um financiamento conosco você recebe um ano de seguro residencial gratuito.</p>
        
           </motion.div>
             <motion.div
@@ -867,6 +862,8 @@ export default function Home() {
     
       </div>
     </footer>
+
+    <button className={styles.fixedButton}>Simular</button>
    </main>
   )
 }
