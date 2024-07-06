@@ -790,12 +790,7 @@ export default function Home() {
       </section>
     <footer className={styles.footer}>
       <div className={styles.infos}>
-      <Image
-          alt="fake logo"
-          width={100}
-          height={100}
-          src={fakeLogo}
-      />
+      <h1>Logo</h1>
         <div className={styles.info}>
         <Image
         src={emailIcon}
@@ -863,7 +858,7 @@ export default function Home() {
       </div>
     </footer>
 
-    <button className={styles.fixedButton}>Simular</button>
+    <button className={styles.fixedButton}><Link href={'/simulacao'}>SIMULAR</Link></button>
    </main>
   )
 }
