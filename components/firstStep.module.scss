@@ -68,7 +68,7 @@ $warning: #d90429;
     display: grid;
     place-items: center;
     
-    input{
+    input,select{
         padding: 4px ;
         background-color: $secondary-color;
         border: 2px solid $s4;

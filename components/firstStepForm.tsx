@@ -8,7 +8,7 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
 
   const createFinanceDataForm = z.object({
     type:z.string()
-    .min(1,"O tipo é obrigatorio"),
+    .min(1,"Selecione uma categoria"),
     value:z.string()
     .min(1,"O valor é obrigatorio")
   })
@@ -43,11 +43,17 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="type">Qual tipo de financiamento deseja?</label>
             {errors.type && <span>{errors.type.message}</span>}
-            <input type="text" 
+            <select 
             {...register("type")}
             onChange={handleChange}
             value={data.type}
-            />
+            >
+              <option value="">Selecione uma categoria de financiamento</option>
+              <option value="Financiamento imobiliario">Financiamento imobiliario</option>
+              <option value="
+Crédito com garantia de imovel">
+Crédito com garantia de imovel</option>
+            </select>
             <label htmlFor="value">Qual valor deseja?</label>
             {errors.value && <span>{errors.value.message}</span>}
             <input 
