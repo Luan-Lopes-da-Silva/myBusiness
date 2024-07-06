@@ -1,53 +1,73 @@
 import styles from './secondStep.module.scss'
+import { z } from "zod"
+import { useForm } from "react-hook-form"
+import { zodResolver } from '@hookform/resolvers/zod'
 
-const SecondStep =({data,handleChange,nameMessage,emailMessage,phoneMessage,birthdayMessage,inputName,inputEmail,inputPhone,inputBirthday}:any)=>(
+
+export default function SecondStep ({data,handleChange,simulateEvent,backStep}:any){
+   const createUserDataForm = z.object({
+      name:z.string()
+      .min(1,"O nome é obrigatorio"),
+      email:z.string().min(1,"Email é obrigatorio").email("Formato de email invalido"),
+      phone:z.string()
+      .min(11,"Formato de numero invalido"),
+      date:z.coerce.date()
+    })
+
+ 
+    type financeData = z.infer<typeof createUserDataForm>
+  
+    const { register, handleSubmit, formState: { errors } } = useForm<financeData>({resolver:zodResolver(createUserDataForm)})
+  
+    
+    const onSubmit = (dataForm:financeData)=>{
+    data.name = dataForm.name
+    data.email = dataForm.email
+    data.phone = dataForm.phone
+    data.date = dataForm.date
+    }
+  
+  return(
    <main className={styles.container}>
-      <h3>Dados pessoais</h3>
-     <form className={styles.form}>
-        <label htmlFor="name">Seu nome</label>
-        <span ref={nameMessage}></span>
-        <input 
-        type="text" 
-        value={data.name || ''}
-        name="name"
-        id="name"
-        onChange={handleChange}
-        ref={inputName}
-        />
-        <label htmlFor="email">Seu email</label>
-        <span ref={emailMessage}></span>
-        <input
-        type="text" 
-        name="email"
-        id="email"
-        value={data.email || ''}
-        onChange={handleChange}
-        ref={inputEmail}
-        />
-        <label htmlFor="phone">Seu telefone</label>
-        <span ref={phoneMessage}></span>
-        <input 
-        type="text" 
-        name="phone"
-        id="phone"
-        value={data.phone || ''}
-        onChange={handleChange}
-        ref={inputPhone}
-        />
-        <label htmlFor="birthday">Sua data de nascimento</label>
-        <span ref={birthdayMessage}></span>
-        <input 
-        type="date" 
-        name="birthday" 
-        id="birthday" 
-        value={data.birthday}
-        onChange={handleChange}
-        ref={inputBirthday}
-        />
-    </form>
+   <h3>Dados pessoais</h3>
+   <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="type">Qual seu nome?</label>
+            {errors.name && <span>{errors.name.message}</span>}
+            <input type="text" 
+            {...register("name")}
+            onChange={handleChange}
+            value={data.name}
+            />
+            <label htmlFor="email">Seu email</label>
+            {errors.email && <span>{errors.email.message}</span>}
+            <input type="text" 
+            {...register("email")}
+            onChange={handleChange}
+            value={data.email}
+            />
+
+            <label htmlFor="phone">Seu telefone</label>
+            {errors.phone && <span>{errors.phone.message}</span>}
+            <input type="text" 
+            {...register("phone")}
+            onChange={handleChange}
+            value={data.phone}
+            />
+
+            <label htmlFor="date">Sua data de nascimento</label>
+            {errors.date && <span>Data invalida</span>}
+            <input 
+            type="date" 
+            {...register('date')}
+            onChange={handleChange}
+            value={data.date}
+            />
+            <div className={styles.buttons}>
+            <button onClick={backStep}>Voltar</button>
+            <button onClick={simulateEvent}>Simular</button>
+            </div>
+            </form>
    </main>
-)
-
-
-
-export default SecondStep
+  )
+ 
+}

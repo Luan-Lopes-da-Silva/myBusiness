@@ -1,8 +1,6 @@
 'use client'
 import styles from "./page.module.scss";
 import Link from "next/link";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css'
 import Image from "next/image";
 import twitterIcon from '@/public/icons8-twitter.svg'
 import instaIcon from '@/public/icons8-instagram.svg'

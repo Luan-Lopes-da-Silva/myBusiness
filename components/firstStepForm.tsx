@@ -1,9 +1,28 @@
 import styles from './firstStep.module.scss'
+import { z } from "zod"
+import { useForm } from "react-hook-form"
+import { zodResolver } from '@hookform/resolvers/zod'
 
-export default function FirstStep({data,handleChange,typeMessage,valueMessage,inputValue,inputType}:any){
+export default function FirstStep({data,handleChange,buttonEvent}:any){
+
+
+  const createFinanceDataForm = z.object({
+    type:z.string()
+    .min(1,"O tipo é obrigatorio"),
+    value:z.string()
+    .min(1,"O valor é obrigatorio")
+  })
+
+  const { register, handleSubmit, formState: { errors } } = useForm<financeData>({resolver:zodResolver(createFinanceDataForm)})
+
+  type financeData = z.infer<typeof createFinanceDataForm>
+
+  
+
     const handleInputChange = (event:any) => {
         const { name, value } = event.target;
         const formattedValue = name === 'value' ? formatNumberWithCommas(value) : value;
+        event.target.value = formattedValue
         handleChange({ target: { name, value: formattedValue } });
       };
     
@@ -12,36 +31,36 @@ export default function FirstStep({data,handleChange,typeMessage,valueMessage,in
         return cleanValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       };
     
+
+      const onSubmit = (dataForm:financeData)=>{
+      data.typeOfFinancement =dataForm.type
+      data.value = dataForm.value
+      }
     
     return(
         <main className={styles.container}>
         <h3>Dados do Financiamento</h3>
-         <div className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="type">Qual tipo de financiamento deseja?</label>
-            <span ref={typeMessage}></span>
-            <select 
-            name="type" 
-            id="type" 
-            value={data.type}
+            {errors.type && <span>{errors.type.message}</span>}
+            <input type="text" 
+            {...register("type")}
             onChange={handleChange}
-            ref={inputType}
-            defaultValue={'Selecione uma opção de financiamento'}
-            >
-                <option value={'Financiamento Imobiliario'}>Financiamento Imobiliario.</option>
-                <option value="Crédito com garantia de imovel">Crédito com garantia de imovel.</option>
-                </select>
-            
+            value={data.type}
+            />
             <label htmlFor="value">Qual valor deseja?</label>
-            <span ref={valueMessage}></span>
+            {errors.value && <span>{errors.value.message}</span>}
             <input 
             type="text" 
-            name="value"
-            id="value"
-            value={data.value}
+            {...register("value")}
             onChange={handleInputChange}
-            ref={inputValue}
+            value={data.value}
             />
-        </div>
+            <div className={styles.buttons}>
+            <button disabled>Voltar</button>
+            <button onClick={buttonEvent}>Próximo</button>
+            </div>
+            </form>
        </main>
     )
     

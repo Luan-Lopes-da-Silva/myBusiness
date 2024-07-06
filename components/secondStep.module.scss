@@ -67,8 +67,8 @@ $warning: #d90429;
     height: 100%;
     display: grid;
     place-items: center;
-    
-    input,select{
+  
+    input{
         padding: 4px ;
         background-color: $secondary-color;
         border: 2px solid $s4;
@@ -94,8 +94,35 @@ $warning: #d90429;
         font-size: 1.1rem;
     }
 
-    select{
-        margin-bottom: 12px;
+    .buttons{
+      width: 100%;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 12px;
+      
+      button{
+        padding: 8px 34px;
+        font-family: 'Button-R';
+        text-transform: uppercase;
+        transition: .4s;
+        font-size: 1.1rem;
+        background-color: $primary-color;
+        border-radius: 8px;
+        border: 2px solid $p6;
+        color: $s7;
+        
+        &:hover{
+          cursor: pointer;
+          background-color: $p6;
+          border-color: $primary-color;
+          color: $s9;
+        }
+      }
     }
+
+
+
+
 }
 }
