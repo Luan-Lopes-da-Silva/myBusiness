@@ -1,10 +1,12 @@
 'use client'
-import { useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import FirstStep from "@/components/firstStepForm";
 import SecondStep from "@/components/secondStepForm";
 import emailjs from '@emailjs/browser'
 import styles from './page.module.scss'
 import Link from "next/link";
+import Image from "next/image";
+import closeIcon from '@/public/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
 
 export default function Simulation() {
 
@@ -19,6 +21,7 @@ export default function Simulation() {
 
   const [currentStep, setCurrentStep] = useState(0)
   const [formData, setFormData] = useState(initialFormData)
+  const modalRef = useRef<HTMLDivElement>(null)
   
   const date = new Date(formData.date)
   const day = date.getDay()
@@ -58,18 +61,24 @@ export default function Simulation() {
     if(formData.type!=='' && formData.value!=='' && currentStep===0){
       setCurrentStep(currentStep + 1);
     }else if(formData.type!=='' && formData.value!=='' && formData.name!=='' && formData.phone!=='' && formData.email!==''&& formData.date!=='' && currentStep===1){
-      setTimeout(() => {
-        alert('Um consultor ja foi notificado aguarde o contato!')
-      }, 2000);
-      emailjs.send(
-         serviceId,
-         templateId,
-         templateParams,
-        {
-          publicKey: publicKey,
-        }
-      )
+      if(modalRef.current){
+        emailjs.send(
+           serviceId,
+           templateId,
+           templateParams,
+          {
+            publicKey: publicKey,
+          }
+        )
+        modalRef.current.style.display ='flex'
+      }
     }else{   
+  }
+}
+
+const closeModal= ()=>{
+  if(modalRef.current){
+    modalRef.current.style.display = 'none'
   }
 }
 
@@ -83,6 +92,19 @@ export default function Simulation() {
     <Link href={'/'}>Voltar</Link>
     <div>
     {steps[currentStep]}
+    </div>
+    <div className={styles.modal} ref={modalRef}>
+      <p>Um consultor ja foi notificado aguarde o contato!</p>
+      <p>Ele ira te contatar via e-mail ou telefone</p>
+     
+      <button onClick={closeModal}>Fechar</button>
+      <Image
+      width={32}
+      height={32}
+      alt="close modal icon"
+      src={closeIcon}
+      onClick={closeModal}
+      />
     </div>
     </main>
   );

@@ -33,6 +33,11 @@ $s13:#000000;
   src: url('../../public/Merriweather-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'Text-M';
+  src: url('../../public/QueensidesMedium-x30zV.ttf');
+}
+
 
   .form{
     width: 100%;
@@ -83,6 +88,51 @@ $s13:#000000;
             border: 2px solid $s4;
             color: $s6;
             margin-right: 182px;
+          }
+        }
+      }
+
+      .modal{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        background-color: $s8;
+        padding: 40px;
+        border-radius: 8px;
+        border: 2px solid $p5;
+        position: absolute;
+        height: 300px;
+        
+        img{
+          position: absolute;
+          top: 2%;
+          right: 2%;
+          cursor: pointer;
+        }
+
+        p{
+          font-family: 'Text-M';
+          color: $s7;
+          font-size: 1.3rem;
+        }
+
+        button{
+          padding: 8px 34px;
+          font-family: 'Button-R';
+          text-transform: uppercase;
+          transition: .4s;
+          font-size: 1.1rem;
+          background-color: $primary-color;
+          border-radius: 8px;
+          border: 2px solid $p6;
+          color: $s7;
+          
+          &:hover{
+            cursor: pointer;
+            background-color: $p6;
+            border-color: $primary-color;
+            color: $s9;
           }
         }
       }

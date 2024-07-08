@@ -4,12 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import twitterIcon from '@/public/icons8-twitter.svg'
 import instaIcon from '@/public/icons8-instagram.svg'
-import linkedinIcon from '@/public/icons8-linkedin.svg'
 import wppIcon from '@/public/icons8-whatsapp.svg'
 import emailIcon from '@/public/mail_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import phoneIcon from '@/public/call_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import scheduleIcon from '@/public/schedule_24dp_FILL0_wght400_GRAD0_opsz24.svg'
-import fakeLogo from '@/public/fakelogo.svg'
+import fbIcon from '@/public/5282541_fb_social media_facebook_facebook logo_social network_icon (1).svg'
 import financementImage from '@/public/mika-baumeister-bGZZBDvh8s4-unsplash.jpg'
 import creditImage from '@/public/maria-ziegler-jJnZg7vBfMs-unsplash (1).jpg'
 import ownerImage from '@/public/owner.svg'
@@ -39,7 +38,7 @@ export default function Home() {
   const introPictureVariants: Variants = {
     hide: {
         opacity: 0,
-        x: 500,
+        x: 200,
     },
     show: {
         opacity: 1,
@@ -398,19 +397,18 @@ return(
       <h2>Modalidades de financiamento</h2>
 
       <div className={styles.containerModalities}>
-        <motion.div className={styles.modality}
-        >
+        <div className={styles.modality}>
           <Image 
           width={300}
           height={300}
           alt="financement image"
           src={financementImage}
           />
-          <div>
+          <motion.div>
           <h3>Financiamento imobiliario</h3>
           <p>O financiamento imobiliário é um empréstimo de longo prazo destinado à aquisição de imóveis residenciais ou comerciais. Os bancos e outras instituições financeiras fornecem o capital necessário para a compra, enquanto o comprador se compromete a pagar o valor emprestado em parcelas mensais que incluem juros e outros encargos. Esse tipo de financiamento permite que pessoas comprem imóveis mesmo sem possuir o valor total necessário. O processo geralmente envolve uma análise de crédito, avaliação do imóvel e a definição de termos como o prazo de pagamento e a taxa de juros, que podem ser fixas ou variáveis.</p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
         <motion.div className={styles.modality2}
         >
          <div>
@@ -695,20 +693,25 @@ return(
       </div>
 
       <div className={styles.icons}>
-        <Image
+       <Link href={"https://x.com/wallifinance"}>
+       <Image
         height={36}
         width={36}
         alt="twitter icon"
         src={twitterIcon}
         />
-        <Image
+       </Link>
+       
+       <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
+       <Image
            height={36}
            width={36}
-           alt="linkedin icon"
-           src={linkedinIcon}
+           alt="facebook icon"
+           src={fbIcon}
         />
+       </Link>
         
-        <Link href={'https://w.app/AJ0Kcf'}>
+        <Link href={"https://contate.me/testewall"}>
           <Image
              height={36}
              width={36}
@@ -716,12 +719,15 @@ return(
              src={wppIcon}
           />
         </Link>
-             <Image
-           height={36}
-           width={36}
-           alt="instagram icon"
-           src={instaIcon}
-        /> 
+        
+        <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
+            <Image
+                height={36}
+                width={36}
+                alt="instagram icon"
+                src={instaIcon}
+            /> 
+        </Link>
       </div>
     </footer>
 
@@ -757,8 +763,10 @@ return(
 
       <div className={styles.containerModalities}>
         <motion.div className={styles.modality}
-        
-        variants={introHeaderVariants}
+         initial="hide"
+         whileInView="show"
+         exit="hide"
+         variants={introHeaderVariants}
         >
           <Image 
           width={300}
@@ -766,13 +774,16 @@ return(
           alt="financement image"
           src={financementImage}
           />
-          <div>
+          <div
+          >
           <h3>Financiamento imobiliario</h3>
           <p>O financiamento imobiliário é um empréstimo de longo prazo destinado à aquisição de imóveis residenciais ou comerciais. Os bancos e outras instituições financeiras fornecem o capital necessário para a compra, enquanto o comprador se compromete a pagar o valor emprestado em parcelas mensais que incluem juros e outros encargos. Esse tipo de financiamento permite que pessoas comprem imóveis mesmo sem possuir o valor total necessário. O processo geralmente envolve uma análise de crédito, avaliação do imóvel e a definição de termos como o prazo de pagamento e a taxa de juros, que podem ser fixas ou variáveis.</p>
           </div>
         </motion.div>
         <motion.div className={styles.modality2}
-        
+        initial="hide"
+         whileInView="show"
+         exit="hide"
         variants={introPictureVariants}
         >
          <div>
@@ -1183,33 +1194,42 @@ return(
       </div>
 
       <div className={styles.icons}>
+       <Link href={"https://x.com/wallifinance"}>
         <Image
-        height={36}
-        width={36}
+        height={52}
+        width={52}
         alt="twitter icon"
         src={twitterIcon}
         />
+       </Link>
+
+       <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
-           height={36}
-           width={36}
-           alt="linkedin icon"
-           src={linkedinIcon}
+           height={52}
+           width={52}
+           alt="facebook icon"
+           src={fbIcon}
         />
+       </Link>
         
-        <Link href={'https://w.app/AJ0Kcf'}>
-          <Image
-             height={36}
-             width={36}
-             alt="wpp icon"
-             src={wppIcon}
-          />
-        </Link>
-             <Image
-           height={36}
-           width={36}
+        
+      <Link href={'https://contate.me/testewall'}>
+        <Image
+           height={52}
+           width={52}
+           alt="wpp icon"
+           src={wppIcon}
+        />
+      </Link>
+      
+      <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
+        <Image
+           height={52}
+           width={52}
            alt="instagram icon"
            src={instaIcon}
         /> 
+      </Link>
       </div>
     </footer>
 
