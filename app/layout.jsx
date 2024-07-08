@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 import Hotjar from '@hotjar/browser';
-const siteId = 5052196;
+const siteId = 5052095;
 const hotjarVersion = 6;
 
 export default function RootLayout({
