@@ -15,6 +15,14 @@ export default function RootLayout({
     <html lang="en">
       <head/>
       <body className={inter.className}>{children}</body>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RW4KC3BJP"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-2RW4KC3BJP');
+      </script>
     </html>
     
   );
