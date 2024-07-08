@@ -16,12 +16,7 @@ import partnerImage from '@/public/partner.svg'
 import businessMan from '@/public/nathan-costa-T8Q8znYdbDw-unsplash.jpg'
 import { Variants,motion } from "framer-motion";
 import useWindowSize from '@/app/utils/useWindowSize'
-import Hotjar from '@hotjar/browser';
 
-const siteId = 5052095;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId,hotjarVersion)
 export default function Home() {
 
   const size = useWindowSize()
