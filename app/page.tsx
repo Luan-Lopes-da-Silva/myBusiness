@@ -16,7 +16,12 @@ import partnerImage from '@/public/partner.svg'
 import businessMan from '@/public/nathan-costa-T8Q8znYdbDw-unsplash.jpg'
 import { Variants,motion } from "framer-motion";
 import useWindowSize from '@/app/utils/useWindowSize'
+import Hotjar from '@hotjar/browser';
 
+const siteId = 5052095;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId,hotjarVersion)
 export default function Home() {
 
   const size = useWindowSize()
@@ -24,11 +29,9 @@ export default function Home() {
   const introHeaderVariants: Variants ={
     hide:{
       opacity:0,
-      x:-200,
     },
     show:{
       opacity:1,
-      x:0,
       transition:{
         duration:2,
       }
@@ -38,7 +41,6 @@ export default function Home() {
   const introPictureVariants: Variants = {
     hide: {
         opacity: 0,
-        x: 200,
     },
     show: {
         opacity: 1,
@@ -52,11 +54,9 @@ export default function Home() {
   const animateText: Variants = {
     hide:{
       opacity:0,
-      x:-500,
     },
     show: {
       opacity: 1,
-      x: 0,
       transition: {
           duration: 2,
       },
@@ -355,11 +355,9 @@ export default function Home() {
   const animatePhoto: Variants = {
     hide:{
       opacity:0,
-      y:100,
     },
     show:{
       opacity:1,
-      y:0,
       transition:{
         duration:2
       }
