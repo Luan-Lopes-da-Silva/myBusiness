@@ -5,10 +5,6 @@ import "./globals.scss";
 import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Home",
-  description: "Pagina principal de nossa plataforma",
-};
 
 export default function RootLayout({
   children
