@@ -16,7 +16,8 @@ export default function Simulation() {
     value: '',
     email: '',
     phone: '',
-    date: ''
+    date: '',
+    financedValue:''
   }
 
   const [currentStep, setCurrentStep] = useState(0)
@@ -35,12 +36,18 @@ export default function Simulation() {
   fullDate =  `${day}/${month}/${year}`
   }
 
+  const formatValue = formData.value.replace(/[^\d]/g, '')
+  const formatValue2 = formData.financedValue.replace(/[^\d]/g, '')
+  const numberSub = Number(formatValue) - Number(formatValue2)
+  const numberWithPoints = `${numberSub}`.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+
   const templateParams = {
   typeOfFinancement: formData.type,
   value: formData.value,
   name: formData.name,
   email: formData.email,
   phone: formData.phone,
+  financedValue: numberWithPoints,
   birthday: fullDate
 }
 
@@ -58,7 +65,7 @@ export default function Simulation() {
 
 
   const nextStep = () => {
-    if(formData.type!=='' && formData.value!=='' && currentStep===0){
+    if(formData.type!=='' && formData.value!=='' && formData.financedValue!=='' && currentStep===0){
       setCurrentStep(currentStep + 1);
     }else if(formData.type!=='' && formData.value!=='' && formData.name!=='' && formData.phone!=='' && formData.email!==''&& formData.date!=='' && currentStep===1){
       if(modalRef.current){

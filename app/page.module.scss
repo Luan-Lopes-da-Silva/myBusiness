@@ -153,7 +153,7 @@ $s13:#000000;
   
   .section{
     padding: 20px;
-    margin: 120px 0px;
+    margin: 40px 0px;
   
     h2{
       margin-bottom: 8px;
@@ -243,6 +243,9 @@ $s13:#000000;
   
   .partners{
     margin: 30px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
   
     h2{
       margin-bottom: 8px;
@@ -260,18 +263,17 @@ $s13:#000000;
   
   
     .partner{
-      display: flex;
+      display: grid;
       width: max-content;
-      background-color: $secondary-color;
-      div{
-        border-left: 2px solid $p6;
-        border-top: 2px solid $p6;
-        border-bottom: 2px solid $p6;
-        padding: 20px;
-      }
-  
-      div:last-child{
-        border-right: 2px solid $p6;
+      gap: 40px;
+      grid-template-columns: repeat(2,200px);
+      place-items: center;
+      
+      img{
+        transition: .4s;
+        &:hover{
+          scale: 1.5;
+        }
       }
     }
   }
@@ -447,31 +449,15 @@ $s13:#000000;
 
     .partners{
       margin: 12px 0px;
+      display: flex;
+      justify-content: center;
       .partner{
-        width: 300px;
-       
-        flex-wrap: wrap;
-
-        div{
-          img{
-            width: 34.4px;
-            height: 33px;
-          }
-          border-left: none;
-          &:nth-child(4),
-          &:nth-child(8),
-          &:nth-child(12),
-          &:nth-child(16),
-          &:nth-child(20)
-          {
-            border-right: 2px solid $p6;
-          }
-          &:nth-child(4)~ div{
-            border-top: none;
-          }
-        }
-      }
-    
+        width: 100%;
+        display: grid;
+        place-items: center;
+        gap: 20px;
+        grid-template-columns: repeat(2,100px);
+      }  
     }
 
     .footer{

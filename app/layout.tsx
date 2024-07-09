@@ -1,16 +1,23 @@
-'use client'
-
 import { Inter } from "next/font/google";
 import "./globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 import Hotjar from '@hotjar/browser';
 import Script from "next/script";
+import { Metadata } from "next";
 const siteId = 5052095;
 const hotjarVersion = 6;
 const measurementId = 'G-2RW4KC3BJP'
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Pagina principal do site'
+}
+
 export default function RootLayout({
-  children
-}) {
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   Hotjar.init(siteId,hotjarVersion)
   return (
     <html lang="en">

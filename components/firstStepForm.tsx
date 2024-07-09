@@ -10,7 +10,9 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
     type:z.string()
     .min(1,"Selecione uma categoria"),
     value:z.string()
-    .min(1,"O valor é obrigatorio")
+    .min(1,"O valor é obrigatorio"),
+    financedValue:z.string()
+    .min(1,"O valor a ser financiado é obrigatorio")
   })
 
   const { register, handleSubmit, formState: { errors } } = useForm<financeData>({resolver:zodResolver(createFinanceDataForm)})
@@ -21,20 +23,27 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
 
     const handleInputChange = (event:any) => {
         const { name, value } = event.target;
-        const formattedValue = name === 'value' ? formatNumberWithCommas(value) : value;
-        event.target.value = formattedValue
+        const formattedValue = name === 'value' ? formatNumberWithPoints(value) : '0';
         handleChange({ target: { name, value: formattedValue } });
-      };
+    };
+
+    const handleInputChange2 = (event:any) =>{
+      const { name, value } = event.target;
+      const formattedValue = name === 'financedValue' ? formatNumberWithPoints(value) : '0';
+      handleChange({ target: { name, value: formattedValue } });
+    }
     
-      const formatNumberWithCommas = (value:any) => {
-        const cleanValue = value.replace(/[^0-9.]/g, '');
-        return cleanValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      const formatNumberWithPoints = (value:any) => {
+        const cleanValue = value.replace(/[^\d]/g, '')
+        const formattedValue = cleanValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        return formattedValue
       };
     
 
       const onSubmit = (dataForm:financeData)=>{
       data.typeOfFinancement =dataForm.type
       data.value = dataForm.value
+      data.financedValue = dataForm.financedValue
       }
     
     return(
@@ -50,17 +59,23 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
             >
               <option value="">Selecione uma categoria de financiamento</option>
               <option value="Financiamento imobiliario">Financiamento imobiliario</option>
-              <option value="
-Crédito com garantia de imovel">
-Crédito com garantia de imovel</option>
+              <option value="Crédito com garantia de imovel">Crédito com garantia de imovel</option>
             </select>
-            <label htmlFor="value">Qual valor deseja?</label>
+            <label htmlFor="value">Qual valor do imovel?</label>
             {errors.value && <span>{errors.value.message}</span>}
             <input 
             type="text" 
             {...register("value")}
             onChange={handleInputChange}
             value={data.value}
+            />
+            <label htmlFor="financedValue">Qual valor a ser financiado?</label>
+            {errors.financedValue && <span>{errors.financedValue.message}</span>}
+            <input 
+            type="text" 
+            {...register('financedValue')}
+            value={data.financedValue}
+            onChange={handleInputChange2}
             />
             <div className={styles.buttons}>
             <button disabled>Voltar</button>

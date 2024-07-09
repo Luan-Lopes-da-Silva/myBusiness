@@ -15,6 +15,12 @@ import ownerImage from '@/public/owner.svg'
 import partnerImage from '@/public/partner.svg'
 import businessMan from '@/public/nathan-costa-T8Q8znYdbDw-unsplash.jpg'
 import { Variants,motion } from "framer-motion";
+import bradescoSvg from '@/public/bradesco.svg'
+import santanderSvg from '@/public/banco-santander-logo.svg'
+import interSvg from '@/public/inter.svg'
+import itauSvg from '@/public/itau-fundo-azul.svg'
+
+
 import useWindowSize from '@/app/utils/useWindowSize'
 
 export default function Home() {
@@ -57,295 +63,6 @@ export default function Home() {
       },
   },
   }; 
-
-  const animatePartner: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.1
-      }
-    }
-  }
-
-  
-  const animatePartner2: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.2
-      }
-    }
-  }
-
-  
-  const animatePartner3: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.3
-      }
-    }
-  }
-
-  
-  const animatePartner4: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.4
-      }
-    }
-  }
-
-  
-  const animatePartner5: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.5
-      }
-    }
-  }
-
-  
-  const animatePartner6: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.6
-      }
-    }
-  }
-
-  
-  const animatePartner7: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.7
-      }
-    }
-  }
-
-  
-  const animatePartner8: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.8
-      }
-    }
-  }
-
-  const animatePartner9: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:.9
-      }
-    }
-  }
-
-  const animatePartner10: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1
-      }
-    }
-  }
-
-  const animatePartner11: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.1
-      }
-    }
-  }
-
-
-  const animatePartner12: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.2
-      }
-    }
-  }
-
-  const animatePartner13: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.3
-      }
-    }
-  }
-
-  const animatePartner14: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.4
-      }
-    }
-  }
-
-  const animatePartner15: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.5
-      }
-    }
-  }
-
-  const animatePartner16: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.6
-      }
-    }
-  }
-
-  const animatePartner17: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.7
-      }
-    }
-  }
-
-  const animatePartner18: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.8
-      }
-    }
-  }
-
-  const animatePartner19: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1.9
-      }
-    }
-  }
-
-  const animatePartner20: Variants = {
-    hide:{
-      opacity:0,
-      y:50,
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:2
-      }
-    }
-  }
-
 
   const animatePhoto: Variants = {
     hide:{
@@ -402,7 +119,7 @@ return(
           <p>O financiamento imobiliário é um empréstimo de longo prazo destinado à aquisição de imóveis residenciais ou comerciais. Os bancos e outras instituições financeiras fornecem o capital necessário para a compra, enquanto o comprador se compromete a pagar o valor emprestado em parcelas mensais que incluem juros e outros encargos. Esse tipo de financiamento permite que pessoas comprem imóveis mesmo sem possuir o valor total necessário. O processo geralmente envolve uma análise de crédito, avaliação do imóvel e a definição de termos como o prazo de pagamento e a taxa de juros, que podem ser fixas ou variáveis.</p>
           </motion.div>
         </div>
-        <motion.div className={styles.modality2}
+        <div className={styles.modality2}
         >
          <div>
          <h3>Crédito com garantia de imovel</h3>
@@ -414,15 +131,14 @@ return(
           alt="credit image"
           src={creditImage}
           />
-        </motion.div>
+        </div>
       </div>
       </section>
 
       <section className={styles.section}>
-      <motion.h2
-      >Quais são os beneficios de fechar conosco?</motion.h2>
+      <h2>Quais são os beneficios de fechar conosco?</h2>
         <div className={styles.benefits}>
-          <motion.div className={styles.benefitContainer}
+          <div className={styles.benefitContainer}
           >
           <p>1.Taxas de Juros Competitivas:oferece algumas das menores taxas de juros do mercado, tornando seu financiamento mais acessível.</p>
           <p>2.Aprovação Rápida: Processo de aprovação ágil que garante que você tenha uma resposta em até 24 horas.</p>
@@ -431,8 +147,8 @@ return(
           <p>5.Portal Online Intuitivo: Um portal online fácil de usar, onde você pode acompanhar o status do seu financiamento, fazer pagamentos e gerenciar sua conta.</p>
           <p>6.Seguro Residencial Gratuito: Ao fazer um financiamento conosco você recebe um ano de seguro residencial gratuito.</p>
        
-          </motion.div>
-            <motion.div
+          </div>
+            <div
             >
             <Image
       width={500}
@@ -440,8 +156,8 @@ return(
       src={businessMan}
       alt="Business man"
       />
-            </motion.div>
-        <motion.div className={styles.benefitContainer}
+            </div>
+        <div className={styles.benefitContainer}
         >
         <p>7.Amortização Antecipada: Opção de amortização antecipada sem multas ou taxas adicionais.</p>
         <p>8.Programa de Fidelidade: Descontos exclusivos e benefícios adicionais para clientes recorrentes da Wall-i.</p>
@@ -449,177 +165,48 @@ return(
         <p>10.Parcerias com Construtoras: Descontos especiais em imóveis de construtoras parceiras da Wall-i.</p>
         <p>11.Suporte 24/7: Suporte ao cliente disponível 24 horas por dia, 7 dias por semana, para responder a qualquer dúvida ou problema.</p>
         <p>12.Cashback: Receba cashback em compras realizadas com parceiros da Wall-i, ajudando a reduzir ainda mais o custo do seu financiamento.</p>  
-        </motion.div>
+        </div>
         </div>
       </section>
 
       <section className={styles.partners}>
-        <h2>Nossos parceiros</h2>
           <div className={styles.partner}>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
+          <Link href={'/simulacao'}> 
+          <Image
+           width={50}
+           height={50}
+           alt="itau svg"
+           src={itauSvg}
+           />
+          </Link>
 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
+          <Link href={'/simulacao'}>
+          <Image
+           width={50}
+           height={50}
+           alt="santander svg"
+           src={santanderSvg}
+           />
+          </Link>
+          
 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div>
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
+          <Link href={'/simulacao'}>
+          <Image
+           width={50}
+           height={50}
+           alt="inter svg"
+           src={interSvg}
+          />
+          </Link>
+
+          <Link href={'/simulacao'}>
+          <Image
+           width={50}
+           height={50}
+           alt="bradesco svg"
+           src={bradescoSvg}
+           />
+          </Link>
            
           </div>
       </section>
@@ -845,270 +432,43 @@ return(
       </section>
 
       <section className={styles.partners}>
-        <h2>Nossos parceiros</h2>
           <div className={styles.partner}>
-            <motion.div
-            initial="hide"
-            whileInView="show"
-            exit="hide"
-            variants={animatePartner}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner2}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner3}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner4}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner5}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner6}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner7}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner8}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner9}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner10}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
+          <Link href={'/simulacao'}> 
+          <Image
+           width={100}
+           height={100}
+           alt="itau svg"
+           src={itauSvg}
+           />
+          </Link>
 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner11}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
+          <Link href={'/simulacao'}>
+          <Image
+           width={100}
+           height={100}
+           alt="santander svg"
+           src={santanderSvg}
+           />
+          </Link>
+          
 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner12}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div>
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner13}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner14}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner15}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner16}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner17}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner18}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner19}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
-            <motion.div
-             initial="hide"
-             whileInView="show"
-             exit="hide"
-             variants={animatePartner20}
-            >
-              <Image
-              width={50}
-              height={50}
-              src={partnerImage}
-              alt="TT icon"
-              />
-            </motion.div> 
+          <Link href={'/simulacao'}>
+          <Image
+           width={100}
+           height={100}
+           alt="inter svg"
+           src={interSvg}
+          />
+          </Link>
+
+          <Link href={'/simulacao'}>
+          <Image
+           width={100}
+           height={100}
+           alt="bradesco svg"
+           src={bradescoSvg}
+           />
+          </Link>
            
           </div>
       </section>
