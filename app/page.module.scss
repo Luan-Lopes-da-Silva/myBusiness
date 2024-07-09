@@ -279,9 +279,18 @@ $s13:#000000;
   }
   
   
+ .footerContainer{
+  height: 400px;
+  position: relative;
+  width: 100%;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
   .footer{
     background-color:$s8;
     padding: 40px;
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
   
@@ -326,6 +335,7 @@ $s13:#000000;
       }
     }
   }
+ }
 }
 
 

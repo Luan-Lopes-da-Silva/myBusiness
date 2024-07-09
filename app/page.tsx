@@ -510,6 +510,7 @@ return(
       </div>
      </div>
       </section>
+    <div className={styles.footerContainer}>
     <footer className={styles.footer}>
       <div className={styles.infos}>
       <h1>Logo</h1>
@@ -588,6 +589,8 @@ return(
       </div>
     </footer>
 
+    </div>
+    
     <button className={styles.fixedButton}><Link href={'/simulacao'}>SIMULAR</Link></button>
    </main>
   )}
