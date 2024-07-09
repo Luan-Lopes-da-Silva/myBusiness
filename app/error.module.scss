@@ -34,9 +34,21 @@ $secondary-color:#FFFFFF;
                 &:hover{
                     color: $secondary-color;
                 }
+            }         
+        }
+    }
+}
+
+@media(max-width:640px){
+    .container{
+        div{
+            h1{
+                font-size: 10rem;
             }
 
-            
+            p{
+                width: 250px;
+            }
         }
     }
 }
