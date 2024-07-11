@@ -191,6 +191,7 @@ $s13:#000000;
           p{
             font-family: 'Text-M';  
             width: 650px;
+            text-align: justify;
           }
         }
       }
@@ -212,6 +213,7 @@ $s13:#000000;
       .benefitContainer{
         p{
           margin-top: 12px;
+          text-align: justify;
         }
       }
   
@@ -235,6 +237,7 @@ $s13:#000000;
       p{
         font-family: 'Text-M';  
         width: 530px;
+        text-align: justify;
       }
     }
   
@@ -263,10 +266,8 @@ $s13:#000000;
   
   
     .partner{
-      display: grid;
-      width: max-content;
-      gap: 40px;
-      grid-template-columns: repeat(2,200px);
+      display: flex;
+      gap: 60px;
       place-items: center;
       
       img{
@@ -416,6 +417,7 @@ $s13:#000000;
             p{
               width: 300px;
               line-height: 1.7;
+              text-align: justify;
             }
           }
         }
@@ -441,7 +443,7 @@ $s13:#000000;
         p{
           font-size: 0.875rem;
           width: 160px;
-       
+          text-align: justify;
         }
       }
 
@@ -449,6 +451,7 @@ $s13:#000000;
         gap: 0;
         p{
           width: 350px;
+          text-align: justify;
         }
         img{
           display: none;
@@ -463,10 +466,9 @@ $s13:#000000;
       justify-content: center;
       .partner{
         width: 100%;
-        display: grid;
+        display: flex;
         place-items: center;
         gap: 20px;
-        grid-template-columns: repeat(2,100px);
       }  
     }
 

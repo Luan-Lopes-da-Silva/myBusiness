@@ -180,6 +180,16 @@ return(
            />
           </Link>
 
+          
+          <Link href={'/simulacao'}>
+          <Image
+           width={50}
+           height={50}
+           alt="bradesco svg"
+           src={bradescoSvg}
+           />
+          </Link>
+
           <Link href={'/simulacao'}>
           <Image
            width={50}
@@ -199,14 +209,6 @@ return(
           />
           </Link>
 
-          <Link href={'/simulacao'}>
-          <Image
-           width={50}
-           height={50}
-           alt="bradesco svg"
-           src={bradescoSvg}
-           />
-          </Link>
            
           </div>
       </section>
@@ -446,6 +448,15 @@ return(
           <Image
            width={100}
            height={100}
+           alt="bradesco svg"
+           src={bradescoSvg}
+           />
+          </Link>
+
+          <Link href={'/simulacao'}>
+          <Image
+           width={100}
+           height={100}
            alt="santander svg"
            src={santanderSvg}
            />
@@ -461,14 +472,7 @@ return(
           />
           </Link>
 
-          <Link href={'/simulacao'}>
-          <Image
-           width={100}
-           height={100}
-           alt="bradesco svg"
-           src={bradescoSvg}
-           />
-          </Link>
+        
            
           </div>
       </section>
