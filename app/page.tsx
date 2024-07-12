@@ -79,7 +79,7 @@ export default function Home() {
 
   const trackEvent = () =>{
     gtag.event({
-      action: 'Click',
+      action: 'click',
       category: 'Button',
       label: 'Social media button',
       value: 1
