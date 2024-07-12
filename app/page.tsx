@@ -275,6 +275,7 @@ return(
       </div>
 
       <div className={styles.icons}>
+       <button>
        <Link href={"https://x.com/wallifinance"}>
        <Image
         height={36}
@@ -283,7 +284,9 @@ return(
         src={twitterIcon}
         />
        </Link>
+       </button>
        
+       <button>
        <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
        <Image
            height={36}
@@ -292,8 +295,10 @@ return(
            src={fbIcon}
         />
        </Link>
+       </button>
         
-        <Link href={"https://contate.me/testewall"}>
+       <button>
+       <Link href={"https://contate.me/testewall"}>
           <Image
              height={36}
              width={36}
@@ -301,7 +306,9 @@ return(
              src={wppIcon}
           />
         </Link>
+       </button>
         
+        <button>
         <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
             <Image
                 height={36}
@@ -310,6 +317,7 @@ return(
                 src={instaIcon}
             /> 
         </Link>
+        </button>
       </div>
     </footer>
 
@@ -554,6 +562,7 @@ return(
       </div>
 
       <div className={styles.icons}>
+       <button>
        <Link href={"https://x.com/wallifinance"}>
         <Image
         height={52}
@@ -562,8 +571,10 @@ return(
         src={twitterIcon}
         />
        </Link>
+       </button>
 
-       <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
+    <button>
+    <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
            width={52}
@@ -571,8 +582,11 @@ return(
            src={fbIcon}
         />
        </Link>
+    </button>
+      
         
         
+      <button>
       <Link href={'https://contate.me/testewall'}>
         <Image
            height={52}
@@ -581,7 +595,9 @@ return(
            src={wppIcon}
         />
       </Link>
+      </button>
       
+      <button>
       <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}
@@ -590,6 +606,7 @@ return(
            src={instaIcon}
         /> 
       </Link>
+      </button>
       </div>
     </footer>
 
