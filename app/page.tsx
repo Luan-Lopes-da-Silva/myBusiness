@@ -22,6 +22,7 @@ import itauSvg from '@/public/itau-fundo-azul.svg'
 
 
 import useWindowSize from '@/app/utils/useWindowSize'
+import { logEvent } from "@/lib/analytics";
 
 export default function Home() {
 
@@ -562,7 +563,9 @@ return(
       </div>
 
       <div className={styles.icons}>
-       <button>
+       <button onClick={()=>{
+      logEvent('User', 'Clicked Button')
+      }}>
        <Link href={"https://x.com/wallifinance"}>
         <Image
         height={52}
@@ -573,7 +576,9 @@ return(
        </Link>
        </button>
 
-    <button>
+    <button onClick={()=>{
+      logEvent('User', 'Clicked Button')
+    }}>
     <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
@@ -586,7 +591,9 @@ return(
       
         
         
-      <button>
+      <button onClick={()=>{
+      logEvent('User', 'Clicked Button')
+      }}>
       <Link href={'https://contate.me/testewall'}>
         <Image
            height={52}
@@ -597,7 +604,9 @@ return(
       </Link>
       </button>
       
-      <button>
+      <button onClick={()=>{
+      logEvent('User', 'Clicked Button')
+      }}>
       <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}

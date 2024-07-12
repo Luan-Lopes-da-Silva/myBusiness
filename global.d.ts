@@ -1,7 +1,6 @@
-interface HotjarWindow extends Window {
-    hj: (...args: any[]) => void;
-    _hjSettings: { hjid: number; hjsv: number };
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
   }
-  
-declare var window: HotjarWindow;
+}
   
