@@ -19,7 +19,7 @@ import bradescoSvg from '@/public/bradesco.svg'
 import santanderSvg from '@/public/banco-santander-logo.svg'
 import interSvg from '@/public/inter.svg'
 import itauSvg from '@/public/itau-fundo-azul.svg'
-
+import * as gtag from "@/lib/gtag"
 
 import useWindowSize from '@/app/utils/useWindowSize'
 import { logEvent } from "@/lib/analytics";
@@ -75,6 +75,15 @@ export default function Home() {
         duration:2
       }
     }
+  }
+
+  const trackEvent = () =>{
+    gtag.event({
+      action: 'Click',
+      category: 'Button',
+      label: 'Social media button',
+      value: 1
+    })
   }
 
 return( 
@@ -563,9 +572,7 @@ return(
       </div>
 
       <div className={styles.icons}>
-       <button onClick={()=>{
-      logEvent('User', 'Clicked Button')
-      }}>
+       <button onClick={trackEvent}>
        <Link href={"https://x.com/wallifinance"}>
         <Image
         height={52}
@@ -576,9 +583,7 @@ return(
        </Link>
        </button>
 
-    <button onClick={()=>{
-      logEvent('User', 'Clicked Button')
-    }}>
+    <button onClick={trackEvent}>
     <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
@@ -591,9 +596,7 @@ return(
       
         
         
-      <button onClick={()=>{
-      logEvent('User', 'Clicked Button')
-      }}>
+      <button onClick={trackEvent}>
       <Link href={'https://contate.me/testewall'}>
         <Image
            height={52}
@@ -604,9 +607,7 @@ return(
       </Link>
       </button>
       
-      <button onClick={()=>{
-      logEvent('User', 'Clicked Button')
-      }}>
+      <button onClick={trackEvent}>
       <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}
