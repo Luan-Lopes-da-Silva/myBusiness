@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { Metadata } from "next";
 import Hotjar from '@hotjar/browser';
 import Script from "next/script";
-const siteId = 5052095;
+const siteId = 5052196;
 const hotjarVersion = 6;
 const measurementId = 'G-2RW4KC3BJP'
 
@@ -19,7 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  Hotjar.init(siteId,hotjarVersion)
   return (
     <html lang="en">
        <Script
@@ -34,6 +33,22 @@ export default function RootLayout({
         gtag('config', '${measurementId}');
     `}
       </Script>
+      <Script
+      strategy="afterInteractive"
+      id="hotjar"
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function(h,o,t,j,a,r){
+            h.hj = h.hj || function(){(h.hj.q = h.hj.q || []).push(arguments);};
+            h._hjSettings = {hjid: ${siteId}, hjsv: 6};
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        `,
+      }}
+    />
       <head/>
       <body className={inter.className}>{children}</body>
     </html>
