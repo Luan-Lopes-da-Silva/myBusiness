@@ -285,7 +285,7 @@ return(
       </div>
 
       <div className={styles.icons}>
-       <button>
+       <button onClick={trackEvent}>
        <Link href={"https://x.com/wallifinance"}>
        <Image
         height={36}
@@ -296,7 +296,7 @@ return(
        </Link>
        </button>
        
-       <button>
+       <button onClick={trackEvent}>
        <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
        <Image
            height={36}
@@ -307,7 +307,7 @@ return(
        </Link>
        </button>
         
-       <button>
+       <button onClick={trackEvent}>
        <Link href={"https://contate.me/testewall"}>
           <Image
              height={36}
@@ -318,7 +318,7 @@ return(
         </Link>
        </button>
         
-        <button>
+        <button onClick={trackEvent}>
         <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
             <Image
                 height={36}
