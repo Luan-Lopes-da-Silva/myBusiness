@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ["latin"] });
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { Metadata } from "next";
 import Script from "next/script";
-const measurementId = 'G-2RW4KC3BJP'
+const measurementId = 'G-JDXM2J5YQQ'
 
 export const metadata: Metadata = {
   title: 'Home',
