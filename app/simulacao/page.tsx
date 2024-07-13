@@ -7,6 +7,8 @@ import styles from './page.module.scss'
 import Link from "next/link";
 import Image from "next/image";
 import closeIcon from '@/public/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
+import * as gtag from "@/lib/gtag"
+
 
 export default function Simulation() {
 
@@ -79,6 +81,13 @@ export default function Simulation() {
         )
         modalRef.current.style.display ='flex'
       }
+      gtag.event({
+        action:'form_submit',
+        category: 'Form Submit',
+        label: 'Simulation form',
+        value:2,
+        page_location: window.location.href
+      })
     }else{   
   }
 }

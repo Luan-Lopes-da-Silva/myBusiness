@@ -286,8 +286,10 @@ return(
       </div>
 
       <div className={styles.icons}>
-       <button onClick={trackEvent}>
-       <Link href={"https://x.com/wallifinance"}>
+      
+       <Link 
+       onClick={(ev)=>trackEvent(ev)}
+       href={"https://x.com/wallifinance"}>
        <Image
         height={36}
         width={36}
@@ -295,10 +297,12 @@ return(
         src={twitterIcon}
         />
        </Link>
-       </button>
+ 
        
-       <button onClick={trackEvent}>
-       <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
+       
+       <Link 
+       onClick={(ev)=>trackEvent(ev)}
+       href={"https://www.facebook.com/profile.php?id=61562086139122"}>
        <Image
            height={36}
            width={36}
@@ -306,10 +310,11 @@ return(
            src={fbIcon}
         />
        </Link>
-       </button>
+      
         
-       <button onClick={trackEvent}>
-       <Link href={"https://contate.me/testewall"}>
+       <Link 
+       onClick={(ev)=>trackEvent(ev)}
+       href={"https://contate.me/testewall"}>
           <Image
              height={36}
              width={36}
@@ -317,10 +322,11 @@ return(
              src={wppIcon}
           />
         </Link>
-       </button>
+
         
-        <button onClick={trackEvent}>
-        <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
+        <Link 
+        onClick={(ev)=>trackEvent(ev)}
+        href={"https://www.instagram.com/wallifinance/?next=%2F"}>
             <Image
                 height={36}
                 width={36}
@@ -328,7 +334,7 @@ return(
                 src={instaIcon}
             /> 
         </Link>
-        </button>
+       
       </div>
     </footer>
 
