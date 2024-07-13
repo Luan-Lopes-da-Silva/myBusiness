@@ -82,7 +82,7 @@ export default function Home() {
       action: 'click',
       category: 'Button',
       label: 'Social media button',
-      value: ev.currentTarget.value
+      value: ev.currentTarget.href
     })
   }
 
@@ -574,7 +574,7 @@ return(
       <div className={styles.icons}>
      
        <Link 
-       onClick={trackEvent}
+       onClick={(ev)=>trackEvent(ev)}
        href={"https://x.com/wallifinance"}>
         <Image
         height={52}
@@ -587,7 +587,7 @@ return(
 
  
     <Link 
-    onClick={trackEvent}
+    onClick={(ev)=>trackEvent(ev)}
     href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
@@ -601,7 +601,7 @@ return(
         
         
       <Link 
-      onClick={trackEvent}
+      onClick={(ev)=>trackEvent(ev)}
       href={'https://contate.me/testewall'}>
         <Image
            height={52}
@@ -613,7 +613,7 @@ return(
 
       
       <Link 
-      onClick={trackEvent}
+      onClick={(ev)=>trackEvent(ev)}
       href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}
