@@ -482,7 +482,7 @@ $s13:#000000;
 
       .infos{
         h1{
-          font-size: 1rem;
+          font-size: 2rem;
           color: $s7;
           font-family: 'Title';
         }
@@ -492,7 +492,9 @@ $s13:#000000;
           align-items: center;
           gap: 4px;
           p{
-            font-size: 0.875rem;
+            font-size: 1rem;
+            color: $s7;
+            text-decoration: none;
           }
         }
       }
@@ -505,7 +507,7 @@ $s13:#000000;
 
         a{
           border: 2px solid $s7;
-          padding: 12px;
+          padding: 8px;
           border-radius: 8px;
           cursor: pointer;
           background-color: transparent;

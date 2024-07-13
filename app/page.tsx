@@ -291,8 +291,8 @@ return(
        onClick={(ev)=>trackEvent(ev)}
        href={"https://x.com/wallifinance"}>
        <Image
-        height={36}
-        width={36}
+        height={20}
+        width={20}
         alt="twitter icon"
         src={twitterIcon}
         />
@@ -304,8 +304,8 @@ return(
        onClick={(ev)=>trackEvent(ev)}
        href={"https://www.facebook.com/profile.php?id=61562086139122"}>
        <Image
-           height={36}
-           width={36}
+           height={20}
+           width={20}
            alt="facebook icon"
            src={fbIcon}
         />
@@ -316,8 +316,8 @@ return(
        onClick={(ev)=>trackEvent(ev)}
        href={"https://contate.me/testewall"}>
           <Image
-             height={36}
-             width={36}
+             height={20}
+             width={20}
              alt="wpp icon"
              src={wppIcon}
           />
@@ -328,8 +328,8 @@ return(
         onClick={(ev)=>trackEvent(ev)}
         href={"https://www.instagram.com/wallifinance/?next=%2F"}>
             <Image
-                height={36}
-                width={36}
+                height={20}
+                width={20}
                 alt="instagram icon"
                 src={instaIcon}
             /> 
