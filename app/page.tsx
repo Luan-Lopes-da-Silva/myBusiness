@@ -82,7 +82,7 @@ export default function Home() {
       action: 'click',
       category: 'Button',
       label: 'Social media button',
-      url:ev.currentTarget.value,
+      url:ev.currentTarget.href,
       value:1
     })
   }
