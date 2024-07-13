@@ -77,12 +77,12 @@ export default function Home() {
     }
   }
 
-  const trackEvent = () =>{
+  const trackEvent = (ev:any) =>{
     gtag.event({
       action: 'click',
       category: 'Button',
       label: 'Social media button',
-      value: 1
+      value: ev.currentTarget.value
     })
   }
 
@@ -572,8 +572,10 @@ return(
       </div>
 
       <div className={styles.icons}>
-       <button onClick={trackEvent}>
-       <Link href={"https://x.com/wallifinance"}>
+     
+       <Link 
+       onClick={trackEvent}
+       href={"https://x.com/wallifinance"}>
         <Image
         height={52}
         width={52}
@@ -581,10 +583,12 @@ return(
         src={twitterIcon}
         />
        </Link>
-       </button>
+     
 
-    <button onClick={trackEvent}>
-    <Link href={"https://www.facebook.com/profile.php?id=61562086139122"}>
+ 
+    <Link 
+    onClick={trackEvent}
+    href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
            width={52}
@@ -592,12 +596,13 @@ return(
            src={fbIcon}
         />
        </Link>
-    </button>
+  
       
         
         
-      <button onClick={trackEvent}>
-      <Link href={'https://contate.me/testewall'}>
+      <Link 
+      onClick={trackEvent}
+      href={'https://contate.me/testewall'}>
         <Image
            height={52}
            width={52}
@@ -605,10 +610,11 @@ return(
            src={wppIcon}
         />
       </Link>
-      </button>
+
       
-      <button onClick={trackEvent}>
-      <Link href={"https://www.instagram.com/wallifinance/?next=%2F"}>
+      <Link 
+      onClick={trackEvent}
+      href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}
            width={52}
@@ -616,7 +622,6 @@ return(
            src={instaIcon}
         /> 
       </Link>
-      </button>
       </div>
     </footer>
 
