@@ -475,24 +475,37 @@ $s13:#000000;
 
     .footer{
       display: flex;
-      padding: 20px;
+      padding: 12px;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
       background-color: $s8;
 
-      .info{
-        p{
+      .infos{
+        h1{
           font-size: 1rem;
+          color: $s7;
+          font-family: 'Title';
+        }
+
+        .info{
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          p{
+            font-size: 0.875rem;
+          }
         }
       }
 
       .icons{
+        display: flex;
+        gap: 8px;
         flex-wrap: wrap;
         margin-top: 0;
 
         a{
           border: 2px solid $s7;
-          padding: 2px;
+          padding: 12px;
           border-radius: 8px;
           cursor: pointer;
           background-color: transparent;
