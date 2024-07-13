@@ -77,12 +77,12 @@ export default function Home() {
     }
   }
 
-  const trackEvent = (ev:any) =>{
+  const trackEvent = (value:any) =>{
     gtag.event({
       action: 'click',
       category: 'Button',
       label: 'Social media button',
-      value: ev.currentTarget.href
+      value: value
     })
   }
 
@@ -574,7 +574,7 @@ return(
       <div className={styles.icons}>
      
        <Link 
-       onClick={(ev)=>trackEvent(ev)}
+       onClick={()=>trackEvent(1)}
        href={"https://x.com/wallifinance"}>
         <Image
         height={52}
@@ -587,7 +587,7 @@ return(
 
  
     <Link 
-    onClick={(ev)=>trackEvent(ev)}
+    onClick={()=>trackEvent(2)}
     href={"https://www.facebook.com/profile.php?id=61562086139122"}>
         <Image
            height={52}
@@ -601,7 +601,7 @@ return(
         
         
       <Link 
-      onClick={(ev)=>trackEvent(ev)}
+      onClick={()=>trackEvent(3)}
       href={'https://contate.me/testewall'}>
         <Image
            height={52}
@@ -613,7 +613,7 @@ return(
 
       
       <Link 
-      onClick={(ev)=>trackEvent(ev)}
+      onClick={()=>trackEvent(4)}
       href={"https://www.instagram.com/wallifinance/?next=%2F"}>
         <Image
            height={52}
