@@ -56,10 +56,11 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
             {...register("type")}
             onChange={handleChange}
             value={data.type}
+            aria-label='Qual tipo de financiamento você deseja'
             >
               <option value="">Selecione uma categoria de financiamento</option>
-              <option value="Financiamento imobiliario">Financiamento imobiliario</option>
-              <option value="Crédito com garantia de imovel">Crédito com garantia de imovel</option>
+              <option value="Financiamento imobiliario" aria-label='Financiamento imobiliario'>Financiamento imobiliario</option>
+              <option value="Crédito com garantia de imovel" aria-label='Crédito com garantia de imovel'>Crédito com garantia de imovel</option>
             </select>
             <label htmlFor="value">Qual valor do imovel?</label>
             {errors.value && <span>{errors.value.message}</span>}
@@ -68,6 +69,7 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
             {...register("value")}
             onChange={handleInputChange}
             value={data.value}
+            aria-label='Input Qual valor do imovel?'
             />
             <label htmlFor="financedValue">Qual valor a ser financiado?</label>
             {errors.financedValue && <span>{errors.financedValue.message}</span>}
@@ -76,10 +78,11 @@ export default function FirstStep({data,handleChange,buttonEvent}:any){
             {...register('financedValue')}
             value={data.financedValue}
             onChange={handleInputChange2}
+            aria-label='Input Qual valor a ser financiado?'
             />
             <div className={styles.buttons}>
             <button disabled>Voltar</button>
-            <button onClick={buttonEvent}>Próximo</button>
+            <button onClick={buttonEvent} aria-label='Próximo formulario'>Próximo</button>
             </div>
             </form>
        </main>

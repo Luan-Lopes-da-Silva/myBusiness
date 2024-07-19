@@ -37,6 +37,7 @@ export default function SecondStep ({data,handleChange,simulateEvent,backStep}:a
             {...register("name")}
             onChange={handleChange}
             value={data.name}
+            aria-label='Input Qual seu nome?'
             />
             <label htmlFor="email">Seu email</label>
             {errors.email && <span>{errors.email.message}</span>}
@@ -44,6 +45,7 @@ export default function SecondStep ({data,handleChange,simulateEvent,backStep}:a
             {...register("email")}
             onChange={handleChange}
             value={data.email}
+            aria-label='Input Seu email'
             />
 
             <label htmlFor="phone">Seu telefone</label>
@@ -52,6 +54,7 @@ export default function SecondStep ({data,handleChange,simulateEvent,backStep}:a
             {...register("phone")}
             onChange={handleChange}
             value={data.phone}
+            aria-label='Input Seu telefone'
             />
 
             <label htmlFor="date">Sua data de nascimento</label>
@@ -61,10 +64,11 @@ export default function SecondStep ({data,handleChange,simulateEvent,backStep}:a
             {...register('date')}
             onChange={handleChange}
             value={data.date}
+            aria-label='Input Sua data de nascimento?'
             />
             <div className={styles.buttons}>
             <button onClick={backStep}>Voltar</button>
-            <button onClick={simulateEvent}>Simular</button>
+            <button onClick={simulateEvent} aria-label='Botão para finalizar sua simulação cheque seu email após confirmar'>Simular</button>
             </div>
             </form>
    </main>
