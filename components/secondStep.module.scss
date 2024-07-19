@@ -69,12 +69,12 @@ $warning: #d90429;
     place-items: center;
   
     input{
-        padding: 4px ;
+        padding: .25rem;
         background-color: $secondary-color;
-        border: 2px solid $s4;
+        border: .125rem solid $s4;
         color: $s3;
-        border-radius: 4px;
-        margin-bottom: 12px;
+        border-radius: .25rem;
+        margin-bottom: .75rem;
         &:focus{
             border-color: $secondary-color;
             color: $s7;
@@ -83,12 +83,12 @@ $warning: #d90429;
     }
     span{
         font-size: 0.875rem;
-        margin-bottom: 8px;
+        margin-bottom: .5rem;
         font-size: 'Text-L';
         color: $warning;
     }
     label{
-        margin-bottom: 4px;
+        margin-bottom: .25rem;
         color: $s7;
         font-family: 'Text-M';
         font-size: 1.1rem;
@@ -97,19 +97,19 @@ $warning: #d90429;
     .buttons{
       width: 100%;
       display: flex;
-      gap: 12px;
+      gap: .75rem;
       justify-content: center;
-      margin-top: 12px;
+      margin-top: .75rem;
       
       button{
-        padding: 8px 34px;
+        padding: .5rem 2.125rem;
         font-family: 'Button-R';
         text-transform: uppercase;
         transition: .4s;
         font-size: 1.1rem;
         background-color: $primary-color;
-        border-radius: 8px;
-        border: 2px solid $p6;
+        border-radius: .5rem;
+        border: .125rem solid $p6;
         color: $s7;
         
         &:hover{

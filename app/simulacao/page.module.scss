@@ -53,26 +53,26 @@ $s13:#000000;
       color: $s7;
       font-family: "Title";
       position: absolute;
-      top: 60px;
-      left: 60px;
+      top: 3.75rem;
+      left: 3.75rem;
     }
 
       .buttons{
         width: 100%;
         display: flex;
-        gap: 12px;
+        gap: .75rem;
         justify-content: center;
-        margin-top: 12px;
+        margin-top: .75rem;
         
         button{
-          padding: 8px 34px;
+          padding: .5rem 2.125rem;
           font-family: 'Button-R';
           text-transform: uppercase;
           transition: .4s;
           font-size: 1.1rem;
           background-color: $primary-color;
-          border-radius: 8px;
-          border: 2px solid $p6;
+          border-radius: .5rem;
+          border: .125rem solid $p6;
           color: $s7;
           
           &:hover{
@@ -84,10 +84,10 @@ $s13:#000000;
 
           &:disabled{
             background-color: $s8;
-            border-radius: 8px;
-            border: 2px solid $s4;
+            border-radius: .5rem;
+            border: .125rem solid $s4;
             color: $s6;
-            margin-right: 182px;
+            margin-right: 11.375rem;
           }
         }
       }
@@ -96,13 +96,13 @@ $s13:#000000;
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 60px;
+        gap: 3.75rem;
         background-color: $s8;
-        padding: 40px;
-        border-radius: 8px;
-        border: 2px solid $p5;
+        padding: 2.5rem;
+        border-radius: .5rem;
+        border: .125rem solid $p5;
         position: absolute;
-        height: 300px;
+        height: 18.75rem;
         
         img{
           position: absolute;
@@ -118,14 +118,14 @@ $s13:#000000;
         }
 
         button{
-          padding: 8px 34px;
+          padding: .5rem 2.125rem;
           font-family: 'Button-R';
           text-transform: uppercase;
           transition: .4s;
           font-size: 1.1rem;
           background-color: $primary-color;
-          border-radius: 8px;
-          border: 2px solid $p6;
+          border-radius: .5rem;
+          border: .125rem solid $p6;
           color: $s7;
           
           &:hover{

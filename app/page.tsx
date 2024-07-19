@@ -12,7 +12,6 @@ import fbIcon from '@/public/5282541_fb_social media_facebook_facebook logo_soci
 import financementImage from '@/public/mika-baumeister-bGZZBDvh8s4-unsplash.jpg'
 import creditImage from '@/public/maria-ziegler-jJnZg7vBfMs-unsplash (1).jpg'
 import ownerImage from '@/public/owner.svg'
-import partnerImage from '@/public/partner.svg'
 import businessMan from '@/public/nathan-costa-T8Q8znYdbDw-unsplash.jpg'
 import { Variants,motion } from "framer-motion";
 import bradescoSvg from '@/public/bradesco.svg'
@@ -20,14 +19,10 @@ import santanderSvg from '@/public/banco-santander-logo.svg'
 import interSvg from '@/public/inter.svg'
 import itauSvg from '@/public/itau-fundo-azul.svg'
 import * as gtag from "@/lib/gtag"
-
 import useWindowSize from '@/app/utils/useWindowSize'
-import { logEvent } from "@/lib/analytics";
 
 export default function Home() {
-
   const size = useWindowSize()
-
   const introHeaderVariants: Variants ={
     hide:{
       opacity:0,
